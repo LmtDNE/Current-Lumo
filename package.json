@@ -1,0 +1,37 @@
+{
+  "name": "lumo-currency",
+  "version": "1.0.0",
+  "description": "An application that converts currency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LmtDNE/Current-Lumo.git"
+  },
+  "author": "Dion Fulwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LmtDNE/Current-Lumo/issues"
+  },
+  "homepage": "https://github.com/LmtDNE/Current-Lumo#readme",
+  "dependencies": {
+    "babel-runtime": "^6.11.6",
+    "express": "^4.14.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
+}
