@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './Components/inputComponent'
 
 
 class App extends React.Component {
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
         <section>
           <h1>This App is for currency conversion!</h1>
+          <Input />
         </section>
       );
   }
