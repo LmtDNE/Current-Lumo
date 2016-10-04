@@ -6,8 +6,8 @@ class Input extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      currency: "",
-      rates: ""
+      currency: 0,
+      rate: 0
     }
   }
 
@@ -20,7 +20,7 @@ class Input extends React.Component {
         return response.json();
     })
     .then((conversion) => {
-        this.setState({ currency: parseFloat(dollar.value + "."+ cents.value), rates: conversion.rates});
+        this.setState({ currency: parseFloat(dollar.value + "."+ cents.value), rate: conversion.rates.EUR});
     });   
 
   }
