@@ -3,10 +3,6 @@ import React,{Component} from 'react';
 
 
 class Output extends React.Component {
-  constructor(props) {
-    super(props)
-
-  }
 
   currencyConverter() {
     console.log("This is props", this.props);
@@ -18,7 +14,7 @@ class Output extends React.Component {
   render() {
 
     return (
-        <section>
+        <section >
           <h1>This is the conversion output</h1>
           {this.currencyConverter()}
         </section>
@@ -27,3 +23,7 @@ class Output extends React.Component {
 }
 
 export default Output;
+  // constructor(props) {
+  //   super(props)
+
+  // }

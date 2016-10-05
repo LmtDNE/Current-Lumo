@@ -3,8 +3,9 @@ import 'isomorphic-fetch';
 import Output from './outputComponent';
 
 class Input extends React.Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
+
     this.state = {
       currency: 0,
       rate: 0
@@ -31,27 +32,27 @@ class Input extends React.Component {
         <h3>Input Amount here in USD</h3>
         <h1>$</h1>
         <form id="input_form" onSubmit={e => this.inputFunction(e, this.dollar, this.cents)}>
-        <input 
-        id="dollar_amount"
-        type="number"
-        min="0"
-        step="1"
-        ref={input => this.dollar = input}
-        name="dollars"/>
-        <input
-        id="cents_amount"
-        type="number"
-        ref={input => this.cents = input}
-        min="0"
-        max='99'
-        step='1'
-        name="cents:" />
-        <input
-        id="submit_input"
-        type="submit"
-        name="submit_currency"/>
+          <input 
+            id="dollar_amount"
+            type="number"
+            min="0"
+            step="1"
+            ref={input => this.dollar = input}
+            name="dollars"/>
+          <input
+            id="cents_amount"
+            type="number"
+            ref={input => this.cents = input}
+            min="0"
+            max='99'
+            step='1'
+            name="cents:" />
+          <input
+            id="submit_input"
+            type="submit"
+            name="submit_currency"/>
         </form>
-        <Output {... this.state} />
+        {this.state.currency !== 0 ? <Output {... this.state} /> : null}
       </section>
 
       )
