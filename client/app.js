@@ -7,7 +7,7 @@ class App extends React.Component {
   
   render() {
     return (
-        <section>
+        <section id="container">
           <h1>This App is for currency conversion!</h1>
           <Input />
         </section>

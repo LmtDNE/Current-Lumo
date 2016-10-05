@@ -28,9 +28,8 @@ class Input extends React.Component {
 
   render() {
     return (
-      <section class="numerical-input">
+      <section className="usd-input">
         <h3>Input Amount here in USD</h3>
-        <h1>$</h1>
         <form id="input_form" onSubmit={e => this.inputFunction(e, this.dollar, this.cents)}>
           <input 
             id="dollar_amount"
@@ -42,6 +41,7 @@ class Input extends React.Component {
           <input
             id="cents_amount"
             type="number"
+            maxLength="2"
             ref={input => this.cents = input}
             min="0"
             max='99'

@@ -23,7 +23,3 @@ class Output extends React.Component {
 }
 
 export default Output;
-  // constructor(props) {
-  //   super(props)
-
-  // }
