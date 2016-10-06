@@ -30,10 +30,10 @@
     "react": "^15.3.1",
     "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.1"
+    "webpack": "^1.13.2",
 
   },
   "devDependencies": {
-    "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   }
 }
