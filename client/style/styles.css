@@ -41,6 +41,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button:focus {outline:0;}
+input:focus {outline:0;}
 
 /*=========================================================================================================================*/
 
@@ -58,7 +60,22 @@ body {
 }
 
 
-.input_container {
+/*=========================================================================================================================*/
+
+/*INPUT*/
+
+/*=========================================================================================================================*/
+
+section.usd_input {
+  position: relative;
+  background: url("./images/robot1.jpg") top center no-repeat;
+  height: 700px;
+  width: 700px;
+  margin: 0px auto;
+
+}
+
+div.input_container {
   position: relative;
   top:165px;
   left: 49.75%;
@@ -68,7 +85,39 @@ body {
   border-radius: 15px;
   transform: translateX(-48%);
 }
-.closed_door{
+
+input#dollar_amount{  
+  background-color: #F9B96A;
+  font-family: 'Share Tech', sans-serif;
+  color: #EC423D;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 100px;
+  width: 105px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+input#cents_amount{
+  display: inline;
+  background-color: #F9B96A;
+  font-family: 'Share Tech', sans-serif;
+  color: #EC423D;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 100px;
+  width: 45px;
+  font-size: 25px;
+  padding: 5px;
+}
+
+/*=========================================================================================================================*/
+
+/*DOOR*/
+
+/*=========================================================================================================================*/
+
+div.closed_door{
   background-color: #B0DFE3;
   background-size: 200px 120px;
   position: absolute;
@@ -85,8 +134,8 @@ body {
   overflow: hidden;
   transform: translateY(-100%);
   transition: all 1s ease-out;
-
 }
+
 div.closed_door p{
   font-family: 'Share Tech', sans-serif;
   font-size: 33px;
@@ -94,61 +143,56 @@ div.closed_door p{
   margin: 30px auto;
 }
 
-#dollar_amount{  
-  background-color: #F9B96A;
-  font-family: 'Share Tech', sans-serif;
-  color: #EC423D;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  height: 100px;
-  width: 105px;
-  font-size: 25px;
-  padding: 5px;
 
-}
+/*=========================================================================================================================*/
 
-#cents_amount{
-  display: inline;
-  background-color: #F9B96A;
-  font-family: 'Share Tech', sans-serif;
-  color: #EC423D;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  height: 100px;
-  width: 45px;
-  font-size: 25px;
-  padding: 5px;
-}
-#submit_input {
+/*BUTTONS*/
+
+/*=========================================================================================================================*/
+
+#submit_dummy {
   visibility: hidden;
 }
 
-section.usd-input {
-  position: relative;
-  background: url("./images/robot1.jpg") top center no-repeat;
-  height: 700px;
-  width: 700px;
-  margin: 0px auto;
-
-}
-
-#output_currency {  
-  background-color: #F9B96A;
+#submit_input {
   position: absolute;
-  top: 0px;
-  color: #EC423D;
-  border: 1px solid #B0DFE3;
-  border-radius: 15px;
   height: 100px;
-  width: 165px;
-  padding: 16px;
+  width: 100px;
+  bottom: 2%;
+  border-radius: 50px;
+  border: 4px solid #EB423C;
+  background-color: #F9B96A;
+  color: #EB423C;
+  right: 5%;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 400;
+  overflow-x: visible;
+  overflow-y: visible;
 }
 
-#output_amount {
+button#back_button{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 4px solid #EB423C;
+  background-color: #F9B96A;
+  bottom: 2%;
+  color: #EB423C;
+  right: 5%;
   font-family: 'Share Tech', sans-serif;
-  font-size: 35px;
-  margin: 25px auto;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+/*=========================================================================================================================*/
+
+/*IMAGES*/
+
+/*=========================================================================================================================*/
 
 img#left_eye{
   position: absolute;
@@ -166,63 +210,31 @@ img#right_eye{
   width: 45px;
   border-radius: 50%;
 }
-.speech-bubble {
-   position: relative;
-   width: 300px;
-   height: 215px;
-   left: -250px;
-   top: 75px;
-   color: black;
-   text-align: center;
-   background: #ffffff;
-   border-radius: 57px;
-   padding: 5px;
-   box-shadow: 1px 16px 14px 0px rgba(NaN, NaN, NaN, 0.77);
-}
 
-.speech-bubble:after {
-   content: '';
-   position: absolute;
-   border-style: solid;
-   border-width: 14px 0 14px 36px;
-   border-color: transparent #ffffff;
-   display: block;
-   width: 0;
-   z-index: 1;
-   right: -36px;
-   top: 135px;
-}
-.speech-bubble h1{
-  font-family: 'Share Tech', sans-serif; 
-  font-size: 50px;
-  margin: 0px auto;
-  padding: 5px;
-}
-.speech-bubble p{
-  position: absolute;
-  font-family: 'Share Tech', sans-serif; 
-  font-size: 20px;
-  font-weight: bolder;
-  margin: 5px auto;
-  padding: 5px
-}
+/*=========================================================================================================================*/
 
-#reset {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-  border: 4px solid #EB423C;
+/*OUTPUT*/
+
+/*=========================================================================================================================*/
+
+
+#output_currency {  
   background-color: #F9B96A;
-  bottom: 2%;
-  color: #EB423C;
-  right: 5%;
-  font-family: 'Share Tech', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  color: #EC423D;
+  border: 1px solid #B0DFE3;
+  border-radius: 15px;
+  height: 82px;
+  width: 145px;
+  padding: 16px;
 }
 
+#output_amount {
+  font-family: 'Share Tech', sans-serif;
+  font-size: 35px;
+  margin: 25px auto;
+}
 
 input[type=checkbox] {
   position: absolute;
@@ -236,6 +248,58 @@ input[type=checkbox] {
 input[type=checkbox]:checked ~ div.closed_door{
   transform: translateY(0);
 }
+
+/*=========================================================================================================================*/
+
+/*SPEECH BUBBLE*/
+
+/*=========================================================================================================================*/
+
+.speech_bubble {
+   position: relative;
+   width: 300px;
+   height: 215px;
+   left: -250px;
+   top: 75px;
+   color: black;
+   text-align: center;
+   background: #ffffff;
+   border-radius: 57px;
+   padding: 5px;
+   box-shadow: 1px 16px 14px 0px rgba(NaN, NaN, NaN, 0.77);
+}
+
+.speech_bubble:after {
+   content: '';
+   position: absolute;
+   border-style: solid;
+   border-width: 14px 0 14px 36px;
+   border-color: transparent #ffffff;
+   display: block;
+   width: 0;
+   z-index: 1;
+   right: -36px;
+   top: 135px;
+}
+
+.speech_bubble h1{
+  font-family: 'Share Tech', sans-serif; 
+  font-size: 50px;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+.speech_bubble p{
+  position: absolute;
+  font-family: 'Share Tech', sans-serif; 
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 5px auto;
+  padding: 5px
+}
+
+
+
 
 
 
