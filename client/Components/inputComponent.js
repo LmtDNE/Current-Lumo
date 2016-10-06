@@ -8,6 +8,7 @@ class Input extends React.Component {
 
     this.state = {
       currency: 0,
+      converted: false,
       rate: 0
     }
   }
@@ -21,7 +22,7 @@ class Input extends React.Component {
         return response.json();
     })
     .then((conversion) => {
-        this.setState({ currency: parseFloat(dollar.value + "."+ cents.value), rate: conversion.rates.EUR});
+        this.setState({ currency: parseFloat(dollar.value + "."+ cents.value), converted: true, rate: conversion.rates.EUR});
     });   
 
   }
@@ -29,9 +30,15 @@ class Input extends React.Component {
   render() {
     return (
       <section className="usd-input">
-        <h3>Input Amount here in USD</h3>
+        <button type="button" id="antenna_button">$</button>
+        <div className="input_container">
+          <div className="closed_door">
+            <input 
+              type="checkbox"
+              defaultChecked />
+          </div>
         <form id="input_form" onSubmit={e => this.inputFunction(e, this.dollar, this.cents)}>
-          <input 
+          <input  
             id="dollar_amount"
             type="number"
             min="0"
@@ -52,7 +59,8 @@ class Input extends React.Component {
             type="submit"
             name="submit_currency"/>
         </form>
-        {this.state.currency !== 0 ? <Output {... this.state} /> : null}
+        {this.state.converted !== false ? <Output {... this.state} /> : null}
+        </div>
       </section>
 
       )

@@ -15,8 +15,9 @@ class Output extends React.Component {
 
     return (
         <section >
-          <h1>This is the conversion output</h1>
-          {this.currencyConverter()}
+          <div id="output_currency">
+            {this.currencyConverter()}
+          </div>
         </section>
       )
   }
