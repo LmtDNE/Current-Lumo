@@ -34,6 +34,8 @@ class Input extends React.Component {
   previousHelper (e) {
     e.preventDefault();
     this.setState({ currency: 0, converted: false, rate:0});
+    let form = document.getElementById("input_form");
+    form.reset();
   } 
 
   render() {
