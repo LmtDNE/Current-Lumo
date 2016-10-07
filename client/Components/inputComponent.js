@@ -25,14 +25,19 @@ class Input extends React.Component {
         return response.json();
     })
     .then((conversion) => {
-        //Convert amoutn and update the state with new amount
-        this.setState({ currency: parseFloat(dollar.value + "."+ cents.value), converted: true, rate: conversion.rates.EUR});
+        // Ensures there is a value entered into input
+        dollar = dollar.value || 0;
+        cents = cents.value || 0;
+        //updates state with conversion rate from api
+        this.setState({ currency: parseFloat(dollar + "."+ cents), converted: true, rate: conversion.rates.EUR});
     });
 
   }
 //Functionality to reset state for new conversions
   previousHelper (e) {
     e.preventDefault();
+
+    document.getElementById("door_down").style.visibility = "visible";
     this.setState({ currency: 0, converted: false, rate:0});
     let form = document.getElementById("input_form");
     form.reset();
@@ -65,12 +70,12 @@ class Input extends React.Component {
             <input
               id="cents_amount"
               type="number"
-              maxLength="2"
               ref={input => this.cents = input}
               min="0"
               max='99'
               step='1'
-              name="cents:" 
+              maxLength="2"
+              name="cents" 
               placeholder=".00"/>
             <input
               id="submit_dummy"
