@@ -9,7 +9,11 @@ class Output extends React.Component {
     setTimeout(()=> {
       let checker = document.getElementById("output_checkbox");
       checker.checked = false;
+      setTimeout(() => {
+        document.getElementById("door_down").style.visibility = "hidden";
+      }, 1000);
     }, 3000);
+
     return "€ " + convertedCurrency.toFixed(2);
 
   }
@@ -19,7 +23,7 @@ class Output extends React.Component {
         <section >
           <div id="output_currency">
             <input type="checkbox" id="output_checkbox" defaultChecked />
-            <div className="closed_door"><Loading type='bars' id="loading" color='silver' height='95' width='175' margin='10' /></div>
+            <div className="closed_door" id="door_down"><Loading type='bars' id="loading" color='silver' height='95' width='175' margin='10' /></div>
             <div id="output_amount">
               {this.currencyConverter()}
             </div>
