@@ -118,17 +118,20 @@ input#cents_amount{
 /*=========================================================================================================================*/
 
 div.closed_door{
-  background-color: #B0DFE3;
-  background-size: 200px 120px;
   position: absolute;
   top: -4px;
   left: -2px;
+  height: 120px;
+  width: 168px;
+  padding: 0 10px 0 0;
   color: #EC423D;
-  border: 5px solid #B0DFE3;
+  border: 1px solid #B0DFE3;
   border-radius: 15px;
-  height: 100px;
-  width: 166px;
-  padding: 5px;
+  background: -webkit-radial-gradient(white,  #B0DFE3, #49CFCF); 
+  background: -o-radial-gradient(white, #B0DFE3, #49CFCF); 
+  background: -moz-radial-gradient(white, #B0DFE3, #49CFCF); 
+  background: radial-gradient(white, #B0DFE3, #49CFCF); 
+  background-size: 200px 120px;
   overflow: hidden;
   max-height: 200px;
   overflow: hidden;
@@ -136,12 +139,6 @@ div.closed_door{
   transition: all 1s ease-out;
 }
 
-div.closed_door p{
-  font-family: 'Share Tech', sans-serif;
-  font-size: 33px;
-  font-weight: bolder;
-  margin: 30px auto;
-}
 
 
 /*=========================================================================================================================*/
@@ -297,8 +294,6 @@ input[type=checkbox]:checked ~ div.closed_door{
   margin: 5px auto;
   padding: 5px
 }
-
-
 
 
 
