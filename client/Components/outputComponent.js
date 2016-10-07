@@ -9,7 +9,7 @@ class Output extends React.Component {
     setTimeout(()=> {
       let checker = document.getElementById("output_checkbox");
       checker.checked = false;
-    }, 5000);
+    }, 3000);
     return "€ " + convertedCurrency.toFixed(2);
 
   }
