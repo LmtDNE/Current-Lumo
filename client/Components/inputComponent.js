@@ -46,7 +46,7 @@ class Input extends React.Component {
   render() {
     return (
       <section className="usd_input">
-        <div className="speech_bubble">
+        <div className="speech_bubble" >
           <h1>Welcome!</h1>
           <p>
             I'm the Currency Robot.

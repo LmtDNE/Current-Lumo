@@ -77,7 +77,7 @@ section.usd_input {
 
 div.input_container {
   position: relative;
-  top:165px;
+  top:175px;
   left: 49.75%;
   height: 115px;
   width: 180px;
@@ -261,8 +261,6 @@ input[type=checkbox]:checked ~ div.closed_door{
    color: black;
    text-align: center;
    background: #ffffff;
-   border-radius: 57px;
-   padding: 5px;
    box-shadow: 1px 16px 14px 0px rgba(NaN, NaN, NaN, 0.77);
 }
 
@@ -283,10 +281,44 @@ input[type=checkbox]:checked ~ div.closed_door{
   font-family: 'Share Tech', sans-serif; 
   font-size: 50px;
   margin: 0px auto;
-  padding: 5px;
+
 }
 
 .speech_bubble p{
+  position: absolute;
+  font-family: 'Share Tech', sans-serif; 
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 5px 15px 5px 15px;
+}
+
+.bubble {
+  visibility: hidden;
+
+}
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 20px 15px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -20px;
+left: 60%;
+}
+
+.bubble h1{
+  font-family: 'Share Tech', sans-serif; 
+  font-size: 50px;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+
+.bubble p{
   position: absolute;
   font-family: 'Share Tech', sans-serif; 
   font-size: 20px;
@@ -297,6 +329,101 @@ input[type=checkbox]:checked ~ div.closed_door{
 
 
 
+
+/*=========================================================================================================================*/
+
+/*MEDIA QUERIES*/
+
+/*=========================================================================================================================*/
+
+
+@media screen and (max-width: 600px) {
+  
+ section.usd_input{
+  position: relative;
+  top: 15px;
+ }
+
+ .speech_bubble{
+  visibility: hidden;
+  left:0;
+ }
+
+ .bubble 
+{
+  position: relative;
+  visibility: visible;
+   width: 100%;
+   height: 215px;
+   color: black;
+   text-align: center;
+   background: #ffffff;
+   padding: 5px;
+   box-shadow: 1px 16px 14px 0px rgba(NaN, NaN, NaN, 0.77);
+}
+
+
+
+#submit_input {
+  position: absolute;
+  margin: 0 auto;
+  bottom: -15px;
+  height: 105px;
+  width: 100%;
+  cursor: pointer;
+  right: 0;
+  border-radius: 0;
+}
+
+button#back_button{
+  position: absolute;
+  margin: 0 auto;
+  bottom: -15px;
+  height: 105px;
+  width: 100%;
+  right: 0;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+
+}
+
+
+/*@media screen and (max-width: 1200px) {
+  body{
+    height: 800px;
+  }
+
+ section.usd_input{
+  position: relative;
+  top: 75px;
+  right: 10%;
+ }
+
+ .speech_bubble{
+  visibility: hidden;
+  top: -25%;
+  left: 25%;
+ }
+
+ .bubble 
+{
+  position: relative;
+  visibility: visible;
+   width: 95%;
+   height: 215px;
+   color: black;
+   text-align: center;
+   background: #ffffff;
+   /*padding: 15px;*/
+   /*border-radius: 57px;
+   margin: 10px 0 0 25px;
+   box-shadow: 1px 16px 14px 0px rgba(NaN, NaN, NaN, 0.77);
+}*/
+
+
+}
 
 
 
